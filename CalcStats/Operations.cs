@@ -3,7 +3,7 @@
     public class Operations
     {
         private readonly List<int> _numbers;
-
+        private const char Separator = '-';
         public Operations(string numbers)
         {
             _numbers = ConvertStringInListInt(numbers);
@@ -14,9 +14,12 @@
             if (string.IsNullOrEmpty(numbers))
                 throw new ArgumentNullException();
 
+            if (!numbers.Contains(Separator))
+                throw new ArgumentException();
+
             var result = new List<int>();
 
-            foreach (var number in numbers.Split())
+            foreach (var number in numbers.Split(Separator))
             {
                 if (!int.TryParse(number, out var validatedNumber))
                     throw new InvalidCastException("you must digit only int numbers, character not allowed");
@@ -43,7 +46,8 @@
 
         public float GetAverageValue()
         {
-            return _numbers.Sum()/_numbers.Count();
+            var result = (float)_numbers.Sum() / _numbers.Count();
+            return result;
         }
     }
 }

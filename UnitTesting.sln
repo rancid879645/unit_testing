@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrimeComposite", "PrimeComp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrimeComposite.Tests", "PrimeComposite.Tests\PrimeComposite.Tests.csproj", "{3A6E52C6-3A22-4F1C-9F26-0E084E8C551B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Addermatic", "Addermatic\Addermatic.csproj", "{22C47F7E-C03F-468D-9BD8-3AD438E16E50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Addermatic.Tests", "Addermatic.Tests\Addermatic.Tests.csproj", "{2613F412-BE98-4677-9338-E966F3B17135}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{3A6E52C6-3A22-4F1C-9F26-0E084E8C551B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3A6E52C6-3A22-4F1C-9F26-0E084E8C551B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3A6E52C6-3A22-4F1C-9F26-0E084E8C551B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22C47F7E-C03F-468D-9BD8-3AD438E16E50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22C47F7E-C03F-468D-9BD8-3AD438E16E50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22C47F7E-C03F-468D-9BD8-3AD438E16E50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22C47F7E-C03F-468D-9BD8-3AD438E16E50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2613F412-BE98-4677-9338-E966F3B17135}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2613F412-BE98-4677-9338-E966F3B17135}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2613F412-BE98-4677-9338-E966F3B17135}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2613F412-BE98-4677-9338-E966F3B17135}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

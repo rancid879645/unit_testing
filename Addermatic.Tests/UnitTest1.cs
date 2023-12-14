@@ -25,5 +25,12 @@ namespace Addermatic.Tests
 
             Assert.AreEqual(30,result);
         }
+
+        [TestMethod]
+        public void Should_Throw_When_Is_Not_integer()
+        {
+            void Action() => new Calculator("10.5", "1542.02");
+            Assert.ThrowsException<InvalidCastException>(Action);
+        }
     }
 }

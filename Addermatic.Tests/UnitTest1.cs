@@ -32,5 +32,12 @@ namespace Addermatic.Tests
             void Action() => new Calculator("10.5", "1542.02");
             Assert.ThrowsException<InvalidCastException>(Action);
         }
+
+        [TestMethod]
+        public void Should_Throw_ArgumentNull_When_Is_Empty_And_Have_A_String()
+        {
+            void Action() => new Calculator(String.Empty, "20");
+            Assert.ThrowsException<ArgumentNullException>(Action);
+        }
     }
 }

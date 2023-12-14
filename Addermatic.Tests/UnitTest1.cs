@@ -14,7 +14,7 @@ namespace Addermatic.Tests
         public void Should_Throw_When_Is_Empty()
         {
             void Action() => new Calculator(String.Empty, "20");
-            Assert.ThrowsException<InvalidCastException>(Action);
+            Assert.ThrowsException<ArgumentNullException>(Action);
         }
 
         [TestMethod]

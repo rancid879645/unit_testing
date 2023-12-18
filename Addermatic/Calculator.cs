@@ -2,14 +2,13 @@
 {
     public class Calculator
     {
-        private int _operandA;
-        private int _operandB;
-
-        public Calculator(string operandA, string operandB)
+        public static int Sum(string operandA, string operandB)
         {
-            _operandA = ConvertToInt(operandA);
-            _operandB = ConvertToInt(operandB);
+            var convertedOperandA = ConvertToInt(operandA);
+            var convertedOperandB = ConvertToInt(operandB);
+            return convertedOperandA + convertedOperandB;
         }
+
         private static int ConvertToInt(string value)
         {
             if (string.IsNullOrEmpty(value))
@@ -17,12 +16,15 @@
 
             if (!int.TryParse(value, out var validatedNumber))
                 throw new InvalidCastException("you must digit only int numbers, character not allowed");
-            return validatedNumber;
+
+            return ValidateNaturalNumber(validatedNumber);
         }
 
-        public int SumOperands()
+        private static int ValidateNaturalNumber(int number)
         {
-            return (_operandA < 0 ? 0 : _operandA)  + (_operandB < 0 ? 0 : _operandB);
+            return number < 0 ? 0 : number;
         }
+
+
     }
 }

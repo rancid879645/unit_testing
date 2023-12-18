@@ -2,13 +2,15 @@
 {
     public class ValidatorNumberType
     {
-        private readonly int _initialNumber;
-        private readonly int _finalNumber;
-
-        public ValidatorNumberType(string initialNumber, string finalNumber)
+        public static void Validate(string initialNumber, string finalNumber)
         {
-            _initialNumber = ConvertToInt(initialNumber);
-            _finalNumber = ConvertToInt(finalNumber);
+            var convertedInitialNumber = ConvertToInt(initialNumber);
+            var convertedFinalNumber = ConvertToInt(finalNumber);
+
+            if (convertedInitialNumber > convertedFinalNumber)
+                throw new InvalidDataException();
+            
+            Iterate(convertedInitialNumber,convertedFinalNumber);
         }
 
         private static int ConvertToInt(string value)
@@ -21,12 +23,11 @@
             return validatedNumber;
         }
 
-        public void Validate()
-        {
-            if (_initialNumber > _finalNumber)
-                throw new InvalidDataException();
 
-            for (var i = _initialNumber; i <= _finalNumber; i++)
+
+        private static void Iterate(int initialNumber, int finalNumber)
+        {
+            for (var i = initialNumber; i <= finalNumber; i++)
             {
                 if (i < 2)
                     Console.WriteLine(i);
@@ -36,7 +37,6 @@
                     Console.WriteLine("Prime");
 
             }
-            
         }
 
         private static bool IsComposite(int number)

@@ -7,32 +7,30 @@ namespace PrimeComposite.Tests
         [TestMethod]
         public void Should_Throw_Invalid_Argument()
         {
-            void Action() => new ValidatorNumberType("A", "20");
+            void Action() => ValidatorNumberType.Validate("A", "20");
             Assert.ThrowsException<InvalidCastException>(Action);
         }
 
         [TestMethod]
         public void Should_Throw_Null_Argument()
         {
-            void Action() => new ValidatorNumberType(string.Empty, "20");
+            void Action() => ValidatorNumberType.Validate(string.Empty, "20");
             Assert.ThrowsException<ArgumentNullException>(Action);
         }
 
         [TestMethod]
         public void Should_Throw_Invalid_Range()
         {
-            var validator = new ValidatorNumberType("40", "20");
-            void Action() => validator.Validate();
+            void Action() => ValidatorNumberType.Validate("40", "20");
             Assert.ThrowsException<InvalidDataException>(Action);
         }
 
         [TestMethod]
         public void Should_Print_Composite()
         {
-            var validator = new ValidatorNumberType("4", "4");
             var sw = new StringWriter();
             Console.SetOut(sw);
-            validator.Validate();
+            ValidatorNumberType.Validate("4", "4");
 
             Assert.AreEqual("Composite", sw.ToString().Trim());
         }
@@ -40,10 +38,9 @@ namespace PrimeComposite.Tests
         [TestMethod]
         public void Should_Print_Prime()
         {
-            var validator = new ValidatorNumberType("2", "2");
             var sw = new StringWriter();
             Console.SetOut(sw);
-            validator.Validate();
+            ValidatorNumberType.Validate("2", "2");
 
             Assert.AreEqual("Prime", sw.ToString().Trim());
         }

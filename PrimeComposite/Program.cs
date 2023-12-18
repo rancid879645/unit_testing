@@ -7,8 +7,6 @@ var from = Console.ReadLine();
 Console.WriteLine("To: ");
 var to = Console.ReadLine();
 
-var validateRange = new ValidatorNumberType(from, to);
-
-validateRange.Validate();
+ValidatorNumberType.Validate(from, to);
 
 

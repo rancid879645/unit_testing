@@ -36,8 +36,9 @@ namespace Addermatic.Tests
         [TestMethod]
         public void Should_Throw_ArgumentNull_When_Is_Empty_And_Have_A_String()
         {
-            void Action() => new Calculator(String.Empty, "20");
+            void Action() => new Calculator(String.Empty, "A");
             Assert.ThrowsException<ArgumentNullException>(Action);
         }
+
     }
 }

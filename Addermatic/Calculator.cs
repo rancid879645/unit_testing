@@ -22,12 +22,7 @@
 
         public int SumOperands()
         {
-            if (_operandA < 0)
-                _operandA = 0;
-            else if (_operandB == 0)
-                _operandB = 0;
-
-            return _operandA + _operandB;
+            return _operandA < 0 ? 0 : _operandA  + _operandB < 0 ? 0 : _operandB;
         }
     }
 }

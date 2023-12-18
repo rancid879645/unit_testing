@@ -49,5 +49,14 @@ namespace Addermatic.Tests
             Assert.AreEqual(0, result);
         }
 
+        [TestMethod]
+        public void Should_Replace_Non_Natural_by_Zero_And_Keep_The_Natural_Number()
+        {
+            var calculator = new Calculator("-10", "20");
+            var result = calculator.SumOperands();
+
+            Assert.AreEqual(20, result);
+        }
+
     }
 }

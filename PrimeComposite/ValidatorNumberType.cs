@@ -31,9 +31,8 @@
             {
                 if (i < 2)
                     Console.WriteLine(i);
-
-                var numberType = GetNumberType(i);
-                Console.WriteLine(numberType);
+                else
+                    Console.WriteLine(GetNumberType(i));
             }
         }
 

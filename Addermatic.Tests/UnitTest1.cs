@@ -40,5 +40,14 @@ namespace Addermatic.Tests
             Assert.ThrowsException<ArgumentNullException>(Action);
         }
 
+        [TestMethod]
+        public void Should_Replace_Non_Natural_by_Zero()
+        {
+            var calculator = new Calculator("-10", "-20");
+            var result = calculator.SumOperands();
+
+            Assert.AreEqual(0, result);
+        }
+
     }
 }

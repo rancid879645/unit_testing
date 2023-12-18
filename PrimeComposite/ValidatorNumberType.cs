@@ -1,4 +1,4 @@
-﻿namespace PrimeComposite.Tests
+﻿namespace PrimeComposite
 {
     public class ValidatorNumberType
     {
@@ -46,7 +46,6 @@
                 if (number % i == 0)
                     return true;
             }
-
             return false;
         }
 

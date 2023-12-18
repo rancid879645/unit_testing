@@ -1,6 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-using PrimeComposite.Tests;
+using PrimeComposite;
 
 Console.WriteLine("From: ");
 var from = Console.ReadLine();

@@ -1,5 +1,6 @@
 namespace PrimeComposite.Tests
 {
+    
     [TestClass]
     public class UnitTest1
     {

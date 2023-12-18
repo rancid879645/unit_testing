@@ -55,5 +55,15 @@ namespace PrimeComposite.Tests
             Assert.AreEqual("0", sw.ToString().Trim());
         }
 
+        [TestMethod]
+        public void Should_Print_One()
+        {
+            var sw = new StringWriter();
+            Console.SetOut(sw);
+            ValidatorNumberType.Validate("1", "1");
+
+            Assert.AreEqual("1", sw.ToString().Trim());
+        }
+
     }
 }

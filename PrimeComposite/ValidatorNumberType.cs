@@ -31,22 +31,20 @@
             {
                 if (i < 2)
                     Console.WriteLine(i);
-                else if (IsComposite(i))
-                    Console.WriteLine("Composite");
-                else
-                    Console.WriteLine("Prime");
 
+                var numberType = GetNumberType(i);
+                Console.WriteLine(numberType);
             }
         }
 
-        private static bool IsComposite(int number)
+        private static string GetNumberType(int number)
         {
             for (var i = 2; i <= Math.Sqrt(number); i++)
             {
                 if (number % i == 0)
-                    return true;
+                    return "Composite";
             }
-            return false;
+            return "Prime";
         }
 
     }

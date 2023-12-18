@@ -2,7 +2,7 @@ namespace PrimeComposite.Tests
 {
     
     [TestClass]
-    public class UnitTest1
+    public class PrimeCompositeTests
     {
         [TestMethod]
         public void Should_Throw_Invalid_Argument()

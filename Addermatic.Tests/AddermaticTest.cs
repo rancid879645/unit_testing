@@ -1,7 +1,7 @@
 namespace Addermatic.Tests
 {
     [TestClass]
-    public class UnitTest1
+    public class AddermaticTest
     {
         [TestMethod]
         public void Should_Throw_Invalid_Argument()

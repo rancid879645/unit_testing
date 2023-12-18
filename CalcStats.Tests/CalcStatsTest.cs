@@ -1,7 +1,7 @@
 namespace CalcStats.Tests
 {
     [TestClass]
-    public class UnitTest1
+    public class CalcStatsTest
     {
         [TestMethod]
         public void Should_Throw_For_Digit_A_Char_in_the_list()
